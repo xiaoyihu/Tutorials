@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Spring - JSF ViewScope Sample</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:dataTable value="#{carBean.carList}" var="car">
+            <f:facet name="header">
+                <h:outputText value="CAR LIST"/>
+            </f:facet>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Model"/>
+                </f:facet>
+                <h:outputText value="#{car.model}"/>
+                <f:facet name="footer">
+                    <h:inputText value="#{carBean.car.model}"/>
+                </f:facet>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Manufacturer"/>
+                </f:facet>
+                <h:outputText value="#{car.manufacturer}"/>
+                <f:facet name="footer">
+                    <h:inputText value="#{carBean.car.manufacturer}"/>
+                </f:facet>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Color"/>
+                </f:facet>
+                <h:outputText value="#{car.color}"/>
+                <f:facet name="footer">
+                    <h:inputText value="#{carBean.car.color}"/>
+                </f:facet>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Actions"/>
+                </f:facet>
+                <h:commandButton value="Remove" action="#{carBean.remove(car)}"/>
+                <f:facet name="footer">
+                    <h:commandButton value="Add" action="#{carBean.add()}"/>
+                </f:facet>
+            </h:column>
+        </h:dataTable>
+    </h:form>
+</h:body>
+</html>
+
