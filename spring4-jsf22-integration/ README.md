@@ -19,5 +19,5 @@ Run this command.
 
 After open http://localhost:8080/index.html in a browser.
 
-[1]: blog.harezmi.com.tr/spring-view-scope-for-jsf-2-users/
+[1]: http://blog.harezmi.com.tr/spring-view-scope-for-jsf-2-users/
  
